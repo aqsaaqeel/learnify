@@ -16,7 +16,7 @@ export const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="text-center p-4 bg-blue-600">© 2022 Copyright:</div>
+      <div className="text-center p-4 bg-blue-600">© 2022 Copyright: Aakriti, Aqsa, Ashika and Mahak</div>
     </footer>
   );
 };

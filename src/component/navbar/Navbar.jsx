@@ -35,7 +35,7 @@ export const Navbar = () => {
             </svg>
           </button>
           <a className="navbar-brand text-blue-600" href="#!">
-            ProductivityApp
+            Learnify
           </a>
         </div>
         <div
@@ -73,7 +73,7 @@ export const Navbar = () => {
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
               >
-                Saved Tasks
+                In progress
               </a>
             </li>
           </ul>
