@@ -35,7 +35,7 @@ export const Navbar = () => {
               ></path>
             </svg>
           </button>
-          <a className="navbar-brand text-blue-600" href="#!">
+          <a className="navbar-brand text-blue-600" href="/">
             Learnify
           </a>
         </div>
