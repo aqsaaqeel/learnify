@@ -1,11 +1,26 @@
 import { Sidebar } from "../../component";
 import { Square } from "./Square";
 import { useEffect, useState } from "react";
-
+import { TicTacToe } from "../../component/questions/tic-tac-toe/TicTacToe";
 const defaultSquares = () => new Array(9).fill(null);
 
 export const TttGame = () => {
+  const [showModal, setShowModal] = useState(false);
   const [squares, setSquares] = useState(defaultSquares());
+  const [answer, setAnswer] = useState("");
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const questions = [
+    { Ques: "What is a variable?", Ans : "storage" },
+    {
+      Ques: "What are the three keywords for declaring variables in JavaScript?", Ans : "let const var"
+    },
+    { Ques: "Are let and const block-scoped or function-scoped?", Ans : "block scoped" },
+    { Ques: "Are var variables block-scoped or function-scoped?", Ans : "function scoped" },
+  ];
+  const currentQuestion = questions[currentQuestionIndex];
+  // questions.forEach(question => cons)
+  // emptyIndex[Math.floor(Math.random() * emptyIndex.length)];
+  // console.log(randomQuestion);
   useEffect(() => {
     const lines = [
       [0, 1, 2],
@@ -46,9 +61,11 @@ export const TttGame = () => {
       setSquares(newSquares);
     };
     if (isComputerTurn) {
-      const winningLines = linesThatAre('O', 'O', null);
-      if(winningLines.length > 0){
-        const winIndex = winningLines[0].filter(index => squares[index] === null)[0];
+      const winningLines = linesThatAre("O", "O", null);
+      if (winningLines.length > 0) {
+        const winIndex = winningLines[0].filter(
+          (index) => squares[index] === null
+        )[0];
         putComputer(winIndex);
         return;
       }
@@ -62,12 +79,21 @@ export const TttGame = () => {
     const isPlayerTurn =
       squares.filter((square) => square !== null).length % 2 === 0;
     if (isPlayerTurn) {
+      setShowModal(true);
       let newSquares = [...squares];
       newSquares[index] = "X";
       setSquares(newSquares);
     }
   };
-
+  const handleAnswer = (userAnswer) => {
+    const answer = "storage";
+    if (userAnswer === questions[currentQuestionIndex].Ans) {
+      setShowModal(false);
+      setCurrentQuestionIndex(currentQuestionIndex => currentQuestionIndex + 1);
+    } else {
+      alert("wrong answer");
+    }
+  };
   return (
     <div className="flex h-screen">
       <div className="flex-none bg-gray-200 w-1/6">
@@ -94,6 +120,13 @@ export const TttGame = () => {
                 onClick={() => handleSquareClick(index)}
               />
             ))}
+            {showModal && (
+              <TicTacToe
+                onAnswer={handleAnswer}
+                modalChange={() => setShowModal(false)}
+                question = {questions[currentQuestionIndex].Ques}
+              />
+            )}
           </div>
         </div>
       </div>
