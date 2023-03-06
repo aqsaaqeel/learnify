@@ -1,12 +1,6 @@
-import { Sidebar } from "../../component";
-export const JavaScript = () => {
-  const codeSnippet = `<script src="main.js"></script>`;
-  const codeSnippet2 = `<script>
-  alert('Hello, world!');
-</script>
-`;
-  return (
-    <div className="flex h-screen">
+export const Levels = (props) =>{
+    return (
+        <div className="flex h-screen">
       <div className="flex-none bg-gray-200 w-1/6">
         <Sidebar />
       </div>
@@ -116,5 +110,5 @@ export const JavaScript = () => {
         </div>
       </div>
     </div>
-  );
-};
+    )
+}
