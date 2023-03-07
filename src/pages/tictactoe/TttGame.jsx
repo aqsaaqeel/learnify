@@ -1,13 +1,13 @@
-import { Sidebar } from "../../component";
+import { Sidebar, TicTacToe } from "../../component";
 import { Square } from "./Square";
 import { useEffect, useState } from "react";
-import { TicTacToe } from "../../component/questions/tic-tac-toe/TicTacToe";
+// import { TicTacToe } from "../../component/questions/tic-tac-toe/TicTacToe";
 const defaultSquares = () => new Array(9).fill(null);
 
 export const TttGame = () => {
   const [showModal, setShowModal] = useState(false);
   const [squares, setSquares] = useState(defaultSquares());
-  const [answer, setAnswer] = useState("");
+  // const [answer, setAnswer] = useState("");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const questions = [
     { Ques: "What is a variable?", Ans : "storage" },
@@ -17,7 +17,7 @@ export const TttGame = () => {
     { Ques: "Are let and const block-scoped or function-scoped?", Ans : "block scoped" },
     { Ques: "Are var variables block-scoped or function-scoped?", Ans : "function scoped" },
   ];
-  const currentQuestion = questions[currentQuestionIndex];
+  // const currentQuestion = questions[currentQuestionIndex];
   // questions.forEach(question => cons)
   // emptyIndex[Math.floor(Math.random() * emptyIndex.length)];
   // console.log(randomQuestion);
@@ -86,7 +86,7 @@ export const TttGame = () => {
     }
   };
   const handleAnswer = (userAnswer) => {
-    const answer = "storage";
+  // const answer = "storage";
     if (userAnswer === questions[currentQuestionIndex].Ans) {
       setShowModal(false);
       setCurrentQuestionIndex(currentQuestionIndex => currentQuestionIndex + 1);
