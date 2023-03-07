@@ -2,7 +2,7 @@ import './App.css';
 import './index.css';
 import {Routes,Route} from "react-router-dom"
 import {Login,Landing, Signup,Home} from "./features"
-import { Dashboard, Progress, Lvl1, Tictactoe, TttGame } from './pages';
+import { Dashboard, Progress, Lvl1, Lvl2, Tictactoe, TttGame } from './pages';
 import { Navbar} from './component';
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
        <Route path = "/dashboard" element = {<Dashboard />} />
        <Route path = "/progress/:language" element = {<Progress />} />
        <Route path = "/lvl1" element = {<Lvl1 />} />
+       <Route path = "/lvl2" element = {<Lvl2 />} />
        <Route path = "/tictactoe" element = {<Tictactoe />} />
        <Route path = "/tttgame" element = {<TttGame />} />
      </Routes>
