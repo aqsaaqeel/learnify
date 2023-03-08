@@ -1,5 +1,5 @@
 import { Sidebar } from "../../component";
-
+import { Link } from "react-router-dom";
 export const Dashboard = () => {
     return (
       <div className="flex h-screen">
@@ -17,6 +17,11 @@ export const Dashboard = () => {
             <a href="/c"><div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">C</div></a>
             <a href="/cpp"><div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">C++</div></a>
             <a href="/java"><div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">Java</div></a>
+            <Link to="/progress/javascript"><div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">JavaScript</div></Link>
+            <Link to="/lvl2"><div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">Python</div></Link>
+            <Link to="/"><div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">C</div></Link>
+            <Link to="/"><div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">HTML</div></Link>
+            <Link to="/"><div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">CSS</div></Link>
           </div>
         </div>
       </div>
