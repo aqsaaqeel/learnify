@@ -27,7 +27,7 @@ export const Progress = () => {
               Level 1
             </div>
           </a>
-          <a href="/">
+          <a href="/lvl2">
             <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
               Level 2
             </div>

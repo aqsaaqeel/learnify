@@ -2,7 +2,7 @@ import './App.css';
 import './index.css';
 import {Routes,Route} from "react-router-dom"
 import {Login,Landing,Signup,Home} from "./features"
-import { Dashboard, JavaScript, Lvl1, Python, Clang, Cpp, Java, Lvc1, Lvpy1, Lvcpp1, Lvjava1 } from './pages';
+import { Dashboard, Progress, Lvl1,Tictactoe, TttGame, Lvl2, Python, Clang, Cpp, Java, Lvc1, Lvpy1, Lvcpp1, Lvjava1 } from './pages';
 import { Navbar} from './component';
 
 
