@@ -2,7 +2,7 @@ import './App.css';
 import './index.css';
 import {Routes,Route} from "react-router-dom"
 import {Login,Landing,Signup,Home} from "./features"
-import { Dashboard, Progress, Lvl1,Tictactoe, TttGame, Lvl2, Python, Clang, Cpp, Java, Lvc1, Lvpy1, Lvcpp1, Lvjava1 } from './pages';
+import { Dashboard, Progress, Lvl1,Tictactoe, TttGame, Lvl2, Python, Clang, Java, Lvc1, Lvpy1, Lvcpp1, Lvjava1 } from './pages';
 import { Navbar} from './component';
 
 
@@ -22,7 +22,7 @@ function App() {
        <Route path='/lvlpy' element = {<Lvpy1/>} />
        <Route path='/c' element={<Clang/>} />
        <Route path='/lvlc' element={<Lvc1/>}/>
-       <Route path='/cpp' element={<Cpp/>} />
+       {/* <Route path='/cpp' element={<Cpp/>} /> */}
        <Route path='/lvlcpp' element={<Lvcpp1/>}/>
        <Route path='java' element={<Java/>} />
        <Route path='lvljava' element={<Lvjava1/>}/>

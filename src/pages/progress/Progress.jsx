@@ -1,14 +1,28 @@
 import { useParams } from "react-router-dom";
 import { Sidebar } from "../../component";
-import { JsInst, PyInst } from "../../contents";
+import { JsInst, PyInst, CppInst, JavaInst, CInst } from "../../contents";
+// import { Lvcpp1, Lvlpy1 } from "../../pages";
 export const Progress = () => {
-  const {language} = useParams();
+  const { language } = useParams();
   let component;
-  if(language === "javascript")
+  let level;
+  if (language === "javascript") {
     component = <JsInst />;
-  else if(language === "Python")
-    component = <PyInst />
-  console.log("hi")
+    level = "lvl1";
+  } else if (language === "python") {
+    component = <PyInst />;
+    level = "lvlpy";
+  } else if (language === "cpp") {
+    component = <CppInst />;
+    level = "lvlcpp";
+  } else if (language === "c") {
+    component = <CInst />;
+    level = "lvlc";
+  } else if (language === "java") {
+    component = <JavaInst />;
+    level = "lvljava";
+  }
+  console.log("hi");
   return (
     <div className="flex h-screen">
       <div className="flex-none bg-gray-200 w-1/6">
@@ -22,11 +36,20 @@ export const Progress = () => {
           student!
         </div>
         <div className="row-span-9 subheading text-center flex flex-wrap gap-10 justify-center p-10">
-          <a href="/lvl1">
-            <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
-              Level 1
-            </div>
-          </a>
+          {/* if(language === "javascript") */}
+          {language === "javascript" ? (
+            <a href={`/${level}`}>
+              <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
+                Level 1
+              </div>
+            </a>
+          ) : (
+            <a href={`/${level}`}>
+              <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
+                Level 1
+              </div>
+            </a>
+          )}
           <a href="/lvl2">
             <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
               Level 2

@@ -1,2 +1,5 @@
 export * from "./installation/JsInst"
 export * from "./installation/PyInst"
+export * from "./installation/CppInst"
+export * from "./installation/CInst"
+export * from "./installation/JavaInst"
