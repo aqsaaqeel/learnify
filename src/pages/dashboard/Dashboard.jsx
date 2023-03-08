@@ -12,6 +12,11 @@ export const Dashboard = () => {
           </div>
           <div className="row-span-1 text-2xl subheading text-center">Pick a language</div>
           <div className="row-span-9 subheading text-center flex flex-wrap gap-10 justify-center p-10">
+            <a href="/javascript"><div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">JavaScript</div></a>
+            <a href="/python"><div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">Python</div></a>
+            <a href="/c"><div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">C</div></a>
+            <a href="/cpp"><div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">C++</div></a>
+            <a href="/java"><div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">Java</div></a>
             <Link to="/progress/javascript"><div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">JavaScript</div></Link>
             <Link to="/lvl2"><div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">Python</div></Link>
             <Link to="/"><div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">C</div></Link>
