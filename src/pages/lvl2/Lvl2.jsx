@@ -8,6 +8,7 @@ export const Lvl2 = () => {
   const [cardItem, setCardItem] = useState([
     {
       id: 2,
+      name: "while loop",
       img: "https://i.ibb.co/nQXj19q/2.png",
       state: "",
       Ques: "What keyword is used to exit a while loop in JavaScript?",
@@ -125,21 +126,34 @@ export const Lvl2 = () => {
     const index = cardItem.findIndex((item) => item.id === id);
     cardItem[index].state = "active";
     setCardItem([...cardItem]);
-    setCurrentQuestionIndex(id);
+    const questionIndex = cardItem.findIndex((item) => item.id === id && item.Ques);
+    setCurrentQuestionIndex(questionIndex);
     setTimeout(() => setShowModal(true), 1000);
   };
+  
   const handleAnswer = (userAnswer) => {
-    // const answer = "storage";
     if (userAnswer === cardItem[currentQuestionIndex].Ans) {
-      cardItem.forEach((item, index) => {
-        if (
-          item.id === cardItem[currentQuestionIndex].id &&
-          index !== currentQuestionIndex
-        ) {
-          item.state = "active";
-        }
-      });
-      // Update the state and trigger a re-render
+      // cardItem.forEach((item, index) => {
+      //   if (
+      //     item.id === cardItem[currentQuestionIndex].id &&
+      //     index !== currentQuestionIndex
+      //   ) {
+      //     item.state = "active";
+      //   }
+      // });
+
+      const currentCard = cardItem[currentQuestionIndex];
+
+      currentCard.state = "active";
+      setCardItem([...cardItem]);
+
+      const matchingCard = cardItem.find(
+        (card) => card.id === currentCard.id && card !== currentCard
+      );
+
+      if (matchingCard) {
+        matchingCard.state = "active";
+      } // Update the state and trigger a re-render
       setCardItem([...cardItem]);
       setShowModal(false);
 
@@ -153,6 +167,7 @@ export const Lvl2 = () => {
       // Show the "you won" modal
       setShowWonModal(true);
       setCompleted(true);
+      console.log("you won")
     }
   };
   return (
@@ -185,7 +200,7 @@ export const Lvl2 = () => {
                 question={cardItem[currentQuestionIndex].Ques}
               />
             )}
-            {showWonModal && <WinningModal />}
+            {showWonModal && <WinningModal /> }
           </div>
         </div>
       </div>

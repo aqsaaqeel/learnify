@@ -7,93 +7,117 @@ const defaultSquares = () => new Array(9).fill(null);
 export const TttGame = () => {
   const [showModal, setShowModal] = useState(false);
   const [squares, setSquares] = useState(defaultSquares());
-  // const [answer, setAnswer] = useState("");
+  const [currentSquareIndex, setCurrentSquareIndex] = useState(0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [hasWon, setHasWon] = useState(false);
+  const [winner, setWinner] = useState("");
   const questions = [
-    { Ques: "What is a variable?", Ans : "storage" },
+    { Ques: "What is a variable?", Ans: "storage" },
     {
-      Ques: "What are the three keywords for declaring variables in JavaScript?", Ans : "let const var"
+      Ques: "What are the three keywords for declaring variables in JavaScript?",
+      Ans: "let const var",
     },
-    { Ques: "Are let and const block-scoped or function-scoped?", Ans : "block scoped" },
-    { Ques: "Are var variables block-scoped or function-scoped?", Ans : "function scoped" },
+    {
+      Ques: "Are let and const block-scoped or function-scoped?",
+      Ans: "block scoped",
+    },
+    {
+      Ques: "Are var variables block-scoped or function-scoped?",
+      Ans: "function scoped",
+    },
   ];
-  // const currentQuestion = questions[currentQuestionIndex];
-  // questions.forEach(question => cons)
-  // emptyIndex[Math.floor(Math.random() * emptyIndex.length)];
-  // console.log(randomQuestion);
+
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+
+  function linesThatAre(a, b, c) {
+    return lines.filter((squareIndex) => {
+      const squareValues = squareIndex.map((index) => squares[index]);
+      return (
+        JSON.stringify([a, b, c].sort()) === JSON.stringify(squareValues.sort())
+      );
+    });
+  }
+
+  const putComputer = (index) => {
+    let newSquares = [...squares];
+    newSquares[index] = "O";
+    setSquares(newSquares);
+  };
+
   useEffect(() => {
-    const lines = [
-      [0, 1, 2],
-      [3, 4, 5],
-      [6, 7, 8],
-      [0, 3, 6],
-      [1, 4, 7],
-      [2, 5, 8],
-      [0, 4, 8],
-      [2, 4, 6],
-    ];
     const isComputerTurn =
       squares.filter((square) => square !== null).length % 2 === 1;
-    function linesThatAre(a, b, c) {
-      return lines.filter((squareIndex) => {
-        const squareValues = squareIndex.map((index) => squares[index]);
-        return (
-          JSON.stringify([a, b, c].sort()) ===
-          JSON.stringify(squareValues.sort())
-        );
-      });
-    }
+
     let emptyIndex = squares
       .map((square, index) => (square === null ? index : null))
       .filter((item) => item !== null);
+
     const playerWon = linesThatAre("X", "X", "X").length > 0;
     const computerWon = linesThatAre("O", "O", "O").length > 0;
 
     if (playerWon) {
-      alert("Player WOn");
+      setHasWon(true);
+      setWinner("Player");
+      return;
     }
+
     if (computerWon) {
-      alert("computer won");
+      setHasWon(true);
+      setWinner("Computer");
     }
-    const putComputer = (index) => {
-      let newSquares = [...squares];
-      newSquares[index] = "O";
-      setSquares(newSquares);
-    };
+
     if (isComputerTurn) {
       const winningLines = linesThatAre("O", "O", null);
       if (winningLines.length > 0) {
         const winIndex = winningLines[0].filter(
           (index) => squares[index] === null
         )[0];
-        putComputer(winIndex);
+        if (!hasWon) {
+          putComputer(winIndex);
+        }
         return;
       }
       let randomIndex =
         emptyIndex[Math.floor(Math.random() * emptyIndex.length)];
-      console.log(randomIndex);
-      putComputer(randomIndex);
+
+      setTimeout(() => {
+        putComputer(randomIndex);
+      }, 2000);
     }
   }, [squares]);
+
   const handleSquareClick = (index) => {
     const isPlayerTurn =
       squares.filter((square) => square !== null).length % 2 === 0;
     if (isPlayerTurn) {
+      setCurrentSquareIndex(index);
       setShowModal(true);
-      let newSquares = [...squares];
-      newSquares[index] = "X";
-      setSquares(newSquares);
     }
   };
+
   const handleAnswer = (userAnswer) => {
-  // const answer = "storage";
     if (userAnswer === questions[currentQuestionIndex].Ans) {
       setShowModal(false);
-      setCurrentQuestionIndex(currentQuestionIndex => currentQuestionIndex + 1);
+      let newSquares = [...squares];
+      newSquares[currentSquareIndex] = "X";
+      setSquares(newSquares);
+      setCurrentQuestionIndex(
+        (currentQuestionIndex) => currentQuestionIndex + 1
+      );
     } else {
       alert("wrong answer");
     }
   };
+
   return (
     <div className="flex h-screen">
       <div className="flex-none bg-gray-200 w-1/6">
@@ -124,10 +148,12 @@ export const TttGame = () => {
               <TicTacToe
                 onAnswer={handleAnswer}
                 modalChange={() => setShowModal(false)}
-                question = {questions[currentQuestionIndex].Ques}
+                question={questions[currentQuestionIndex].Ques}
               />
             )}
-          </div>
+          </div>{" "}
+          {console.log(winner)}
+          {hasWon && <h1>{winner} won the game!</h1>}
         </div>
       </div>
     </div>
