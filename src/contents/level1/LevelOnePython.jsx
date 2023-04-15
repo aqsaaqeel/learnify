@@ -1,20 +1,8 @@
-import { Sidebar } from "../../component";
-export const Lvpy1 = () => {
-  const codeSnippet = 
-    `x = 10;  y = "hello";`;
+const codeSnippet = 
+`x = 10;  y = "hello";`;
+export const LevelOnePython = () => {
   return (
-    <div className="flex h-screen">
-      <div className="flex-none bg-gray-200 w-1/6">
-        <Sidebar />
-      </div>
-      <div className="flex-1 flex flex-col gap-5 p-8">
-        <div className="headings flex items-center justify-between">
-            <div className="row-span-1 welcome-text text-3xl flex p-5 items-center">
-            <span className="font-bold text-4xl p-2">Level 1:</span> Python
-            </div>
-            <button className="px-10 py-4 bg-blue-500 text-zinc-50 m-5 rounded-md ">Start Game</button>
-        </div>
-        <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
+<div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
           <h1 className="text-4xl">What are variables?</h1>
           <p className="inline-block font-thin text-left items-start justify-start py-5">
             In Python, a variable is a named location in memory that stores a value. Variables are used to store data that can be manipulated or processed by a program.{" "}
@@ -71,7 +59,5 @@ export const Lvpy1 = () => {
             </li>
           </ol>
         </div>
-      </div>
-    </div>
   );
 };

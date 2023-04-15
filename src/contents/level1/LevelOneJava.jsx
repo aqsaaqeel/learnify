@@ -1,22 +1,10 @@
-import { Sidebar } from "../../component";
-export const Lvjava1 = () => {
-  const codeSnippet = 
-    `int age = 25;
+const codeSnippet = 
+`int age = 25;
 float height = 1.75f;
 char initial = 'J';
-       `;
-  return (
-    <div className="flex h-screen">
-      <div className="flex-none bg-gray-200 w-1/6">
-        <Sidebar />
-      </div>
-      <div className="flex-1 flex flex-col gap-5 p-8">
-        <div className="headings flex items-center justify-between">
-            <div className="row-span-1 welcome-text text-3xl flex p-5 items-center">
-            <span className="font-bold text-4xl p-2">Level 1:</span> Java
-            </div>
-            <button className="px-10 py-4 bg-blue-500 text-zinc-50 m-5 rounded-md ">Start Game</button>
-        </div>
+   `;
+export const LevelOneJava = () =>{
+    return (
         <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
           <h1 className="text-4xl">What are variables?</h1>
           <p className="inline-block font-thin text-left items-start justify-start py-5">
@@ -74,7 +62,5 @@ char initial = 'J';
             </li>
           </ol>
         </div>
-      </div>
-    </div>
-  );
-};
+    )
+}
