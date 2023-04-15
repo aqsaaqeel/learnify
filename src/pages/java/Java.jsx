@@ -5,6 +5,7 @@ export const Java = () => {
 //   alert('Hello, world!');
 // </script>
 // `;
+
   return (
     <div className="flex h-screen">
       <div className="flex-none bg-gray-200 w-1/6">
