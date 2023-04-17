@@ -2,12 +2,11 @@ import { Sidebar, TicTacToe } from "../../component";
 import { Square } from "./Square";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import { TicTacToe } from "../../component/questions/tic-tac-toe/TicTacToe";
-// Import the "questions" array from the selected file
-// Set the path to the file that you want to import from based on the current route
-import { JsQuestions, PyQuestions } from "../../contents/tictactoe-questions/tittactoeJavascriptQues";
+import {
+  JsQuestions,
+  PyQuestions,
+} from "../../contents/tictactoe-questions/tittactoeQuestions";
 const defaultSquares = () => new Array(9).fill(null);
-
 
 export const TttGame = () => {
   const [showModal, setShowModal] = useState(false);
@@ -16,22 +15,32 @@ export const TttGame = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [hasWon, setHasWon] = useState(false);
   const [winner, setWinner] = useState("");
-  const {language} = useParams();
-  const questions = [
-    { Ques: "What is a variable?", Ans: "storage" },
-    {
-      Ques: "What are the three keywords for declaring variables in JavaScript?",
-      Ans: "let const var",
-    },
-    {
-      Ques: "Are let and const block-scoped or function-scoped?",
-      Ans: "block scoped",
-    },
-    {
-      Ques: "Are var variables block-scoped or function-scoped?",
-      Ans: "function scoped",
-    },
-  ];
+  const { language } = useParams();
+  let questions;
+
+  if (language === "javascript") {
+    questions = JsQuestions;
+  } else if (language === "python") {
+    questions = PyQuestions;
+  }
+  console.log(JsQuestions, PyQuestions);
+  console.log(questions);
+
+  // const questions = [
+  //   { Ques: "What is a variable?", Ans: "storage" },
+  //   {
+  //     Ques: "What are the three keywords for declaring variables in JavaScript?",
+  //     Ans: "let const var",
+  //   },
+  //   {
+  //     Ques: "Are let and const block-scoped or function-scoped?",
+  //     Ans: "block scoped",
+  //   },
+  //   {
+  //     Ques: "Are var variables block-scoped or function-scoped?",
+  //     Ans: "function scoped",
+  //   },
+  // ];
 
   const lines = [
     [0, 1, 2],
