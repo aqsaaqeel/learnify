@@ -1,7 +1,11 @@
 import { Sidebar, TicTacToe } from "../../component";
 import { Square } from "./Square";
 import { useEffect, useState } from "react";
-// import { TicTacToe } from "../../component/questions/tic-tac-toe/TicTacToe";
+import { useParams } from "react-router-dom";
+import {
+  JsQuestions,
+  PyQuestions,
+} from "../../contents/tictactoe-questions/tittactoeQuestions";
 const defaultSquares = () => new Array(9).fill(null);
 
 export const TttGame = () => {
@@ -11,21 +15,32 @@ export const TttGame = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [hasWon, setHasWon] = useState(false);
   const [winner, setWinner] = useState("");
-  const questions = [
-    { Ques: "What is a variable?", Ans: "storage" },
-    {
-      Ques: "What are the three keywords for declaring variables in JavaScript?",
-      Ans: "let const var",
-    },
-    {
-      Ques: "Are let and const block-scoped or function-scoped?",
-      Ans: "block scoped",
-    },
-    {
-      Ques: "Are var variables block-scoped or function-scoped?",
-      Ans: "function scoped",
-    },
-  ];
+  const { language } = useParams();
+  let questions;
+
+  if (language === "javascript") {
+    questions = JsQuestions;
+  } else if (language === "python") {
+    questions = PyQuestions;
+  }
+  console.log(JsQuestions, PyQuestions);
+  console.log(questions);
+
+  // const questions = [
+  //   { Ques: "What is a variable?", Ans: "storage" },
+  //   {
+  //     Ques: "What are the three keywords for declaring variables in JavaScript?",
+  //     Ans: "let const var",
+  //   },
+  //   {
+  //     Ques: "Are let and const block-scoped or function-scoped?",
+  //     Ans: "block scoped",
+  //   },
+  //   {
+  //     Ques: "Are var variables block-scoped or function-scoped?",
+  //     Ans: "function scoped",
+  //   },
+  // ];
 
   const lines = [
     [0, 1, 2],

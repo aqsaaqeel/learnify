@@ -5,22 +5,22 @@ import { JsInst, PyInst, CppInst, JavaInst, CInst } from "../../contents";
 export const Progress = () => {
   const { language } = useParams();
   let component;
-  let level;
+  // let level;
   if (language === "javascript") {
     component = <JsInst />;
-    level = "lvl1";
+    // level = "lvl1";
   } else if (language === "python") {
     component = <PyInst />;
-    level = "lvlpy";
+    // level = "lvlpy";
   } else if (language === "cpp") {
     component = <CppInst />;
-    level = "lvlcpp";
+    // level = "lvlcpp";
   } else if (language === "c") {
     component = <CInst />;
-    level = "lvlc";
+    // level = "lvlc";
   } else if (language === "java") {
     component = <JavaInst />;
-    level = "lvljava";
+    // level = "lvljava";
   }
   console.log("hi");
   return (
@@ -36,36 +36,35 @@ export const Progress = () => {
           student!
         </div>
         <div className="row-span-9 subheading text-center flex flex-wrap gap-10 justify-center p-10">
-          {/* if(language === "javascript") */}
           {language === "javascript" ? (
-            <a href={`/${level}`}>
+            <a href={`/progress/${language}/lvl1`}>
               <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
                 Level 1
               </div>
             </a>
           ) : (
-            <a href={`/${level}`}>
+            <a href={`/progress/${language}/lvl1`}>
               <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
                 Level 1
               </div>
             </a>
           )}
-          <a href="/lvl2">
+          <a href={`/progress/${language}/lvl1`}>
             <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
               Level 2
             </div>
           </a>
-          <a href="/">
+          <a href={`/lvl3`}>
             <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
               Level 3
             </div>
           </a>
-          <a href="/">
+          <a href={`/progress/${language}/lvl1`}>
             <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
               Level 4
             </div>
           </a>
-          <a href="/">
+          <a href={`/progress/${language}/lvl1`}>
             <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
               Level 5
             </div>
