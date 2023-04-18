@@ -16,7 +16,7 @@ export const LightsOut = () => {
         </div>
 
         <div className="installation-info flex justify-center bg-slate-200 rounded-md p-10 mx-5 h-auto">
-            <Board />
+        <Board size={5} />
         </div>
       </div>
     </div>
