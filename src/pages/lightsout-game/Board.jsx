@@ -128,7 +128,7 @@ export const Board = ({ size }) => {
 
   const handleQuestionModalClose = () => {
     setShowQuestionModal(false);
-    currentQuestionIndex(currentQuestionIndex => currentQuestionIndex + 1);
+    setCurrentQuestionIndex(currentQuestionIndex => currentQuestionIndex + 1);
   };
 
   const handleQuestionModalSubmit = () => {

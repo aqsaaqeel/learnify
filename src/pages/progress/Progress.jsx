@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Sidebar } from "../../component";
-import { JsInst, PyInst, CppInst, JavaInst, CInst } from "../../contents";
+import { JsInst, PyInst, CppInst, JavaInst, CInst, RInst} from "../../contents";
 // import { Lvcpp1, Lvlpy1 } from "../../pages";
 export const Progress = () => {
   const { language } = useParams();
@@ -20,6 +20,10 @@ export const Progress = () => {
     // level = "lvlc";
   } else if (language === "java") {
     component = <JavaInst />;
+    // level = "lvljava";
+  }
+  else if (language === "r") {
+    component = <RInst />;
     // level = "lvljava";
   }
   console.log("hi");
@@ -59,7 +63,7 @@ export const Progress = () => {
               Level 3
             </div>
           </a>
-          <a href={`/progress/${language}/lvl1`}>
+          {/* <a href={`/progress/${language}/lvl1`}>
             <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
               Level 4
             </div>
@@ -68,7 +72,7 @@ export const Progress = () => {
             <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
               Level 5
             </div>
-          </a>
+          </a> */}
         </div>
         {component}
       </div>

@@ -6,7 +6,7 @@ export const LightsOut = (props) => {
     setAnswer(event.target.value);
   };
   const handleAnswer = () => {
-    const userAnswer = answer;
+    console.log(answer)
   };
 console.log(props)
   return (
@@ -52,6 +52,7 @@ console.log(props)
                       class="form-radio"
                       name="answer"
                       value={choice}
+                      onClick={handleAnswer}
                       checked={props.answer === choice}
                       onChange={handleChange}
                     />
@@ -65,7 +66,7 @@ console.log(props)
                 type="button"
                 class="inline-flex w-full justify-center rounded-md bg-blue-400 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
                 onClick={props.modalChange}
-                disabled={!answer}
+                // disabled={!answer}
               >
                 Lock answer
               </button>

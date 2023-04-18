@@ -39,6 +39,11 @@ export const Dashboard = () => {
               Java
             </div>
           </Link>
+          <Link to="/progress/r">
+            <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
+              R
+            </div>
+          </Link>
 
         </div>
       </div>
