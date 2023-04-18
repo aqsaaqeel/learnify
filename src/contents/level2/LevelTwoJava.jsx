@@ -2,7 +2,7 @@ const codeSnippet = `int age = 25;
 float height = 1.75f;
 char initial = 'J';
    `;
-export const LevelOneJava = () => {
+export const LevelTwoJava = () => {
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
       <h1 className="text-4xl">What are variables?</h1>
