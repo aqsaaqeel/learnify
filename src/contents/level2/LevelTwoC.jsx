@@ -1,6 +1,6 @@
 const codeSnippet = `int x = 10; float = 20.008; 
 char initial = 'J';`;
-export const LevelOneC = () => {
+export const LevelTwoC = () => {
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
       <h1 className="text-4xl">What are variables?</h1>

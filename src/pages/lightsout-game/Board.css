@@ -1,0 +1,24 @@
+.Board {
+    display:flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 2px;
+    box-shadow: 
+        0 0 1rem #000,
+        0 0 0.5rem #fff
+}
+
+
+.won {
+    color: white;
+
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    padding: 0 1rem;
+
+    text-shadow: 
+        0 0 calc(1*var(--size)) white,
+        0 0 calc(2*var(--size)) white,
+        0 0 calc(4*var(--size)) white;
+}

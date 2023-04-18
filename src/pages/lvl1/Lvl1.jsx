@@ -1,6 +1,6 @@
 import { Sidebar } from "../../component";
 import { Link, useParams } from "react-router-dom";
-import { LevelOneJS, LevelOneJava, LevelOnePython, LevelOneC, LevelOneCpp } from "../../contents/level1";
+import { LevelOneJS, LevelOneJava, LevelOnePython, LevelOneC, LevelOneCpp, LevelOneR } from "../../contents/level1";
 export const Lvl1 = () => {
   let component;
   const { language } = useParams();
@@ -15,6 +15,9 @@ export const Lvl1 = () => {
     component = <LevelOneC />;
   } else if (language === "java") {
     component = <LevelOneJava />;
+  }
+  else if (language === "r") {
+    component = <LevelOneR />;
   }
   return (
     <div className="flex h-screen">

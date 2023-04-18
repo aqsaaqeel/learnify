@@ -1,5 +1,5 @@
 const codeSnippet = `x = 10;  y = "hello";`;
-export const LevelOnePython = () => {
+export const LevelThreePython = () => {
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
       <h1 className="text-4xl">What are variables?</h1>
