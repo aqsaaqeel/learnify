@@ -108,7 +108,7 @@ export const TttGame = () => {
         putComputer(randomIndex);
       }, 2000);
     }
-  });
+  }, [squares]);
 
   const handleSquareClick = (index) => {
     const isPlayerTurn =
