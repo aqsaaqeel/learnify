@@ -1,49 +1,5 @@
-import { Sidebar } from "../../component";
-export const Java = () => {
-  const codeSnippet = `<script src="main.js"></script>`;
-  const codeSnippet2 = `<script>
-  alert('Hello, world!');
-</script>
-`;
-  return (
-    <div className="flex h-screen">
-      <div className="flex-none bg-gray-200 w-1/6">
-        <Sidebar />
-      </div>
-      <div className="flex-1 flex flex-col gap-5 p-8">
-        <div className="row-span-1 welcome-text text-3xl flex p-5 justify-center text-center items-center">
-          <span className="font-bold text-4xl p-2">
-            Your Java progress,
-          </span>{" "}
-          student!
-        </div>
-        <div className="row-span-9 subheading text-center flex flex-wrap gap-10 justify-center p-10">
-          <a href="/lvljava">
-            <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
-              Level 1
-            </div>
-          </a>
-          <a href="/">
-            <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
-              Level 2
-            </div>
-          </a>
-          <a href="/">
-            <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
-              Level 3
-            </div>
-          </a>
-          <a href="/">
-            <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
-              Level 4
-            </div>
-          </a>
-          <a href="/">
-            <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
-              Level 5
-            </div>
-          </a>
-        </div>
+export const JavaInst = () => {
+    return (
         <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
           <h1 className="text-4xl">About</h1>
           <p className="inline-block font-thin text-left items-start justify-start py-5">
@@ -77,7 +33,5 @@ export const Java = () => {
           </ol>
           <p>These steps may vary slightly depending on the version of Java you are installing and the operating system you are using, but they should give you a general idea of the process involved in installing Java. Note that some IDEs, such as Eclipse or NetBeans, come with their own bundled version of Java, so you may not need to install Java separately if you are using one of these IDEs.</p>
         </div>
-      </div>
-    </div>
-  );
-};
+    )
+}

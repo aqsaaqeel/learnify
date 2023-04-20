@@ -2,8 +2,9 @@ import './App.css';
 import './index.css';
 import {Routes,Route} from "react-router-dom"
 import {Login,Landing,Signup,Home} from "./features"
-import { Dashboard, JavaScript, Lvl1, Python, Clang, Cpp, Java, Lvc1, Lvpy1, Lvcpp1, Lvjava1 } from './pages';
+import { Dashboard, Progress, TttGame,Lvl1, Lvl2, MemoryGameScreen, LightsOut} from './pages';
 import { Navbar} from './component';
+import { Lvl3 } from './pages/lvl3/Lvl3';
 
 
 function App() {
@@ -17,18 +18,15 @@ function App() {
        <Route path="/home" element={<Home />} />
        <Route path = "/dashboard" element = {<Dashboard />} />
        <Route path = "/progress/:language" element = {<Progress />} />
-       <Route path = "/lvl1" element = {<Lvl1 />} />
-       <Route path = "/python" element = {<Python/>} />
-       <Route path='/lvlpy' element = {<Lvpy1/>} />
-       <Route path='/c' element={<Clang/>} />
-       <Route path='/lvlc' element={<Lvc1/>}/>
-       <Route path='/cpp' element={<Cpp/>} />
-       <Route path='/lvlcpp' element={<Lvcpp1/>}/>
-       <Route path='java' element={<Java/>} />
-       <Route path='lvljava' element={<Lvjava1/>}/>
+       <Route path = "/progress/:language/lvl1" element = {<Lvl1 />} />
+       <Route path = "/progress/:language/lvl2" element = {<Lvl2 />} />
+       <Route path = "/progress/:language/lvl3" element = {<Lvl3 />} />
        <Route path = "/lvl2" element = {<Lvl2 />} />
-       <Route path = "/tictactoe" element = {<Tictactoe />} />
-       <Route path = "/tttgame" element = {<TttGame />} />
+       <Route path = "/lvl3" element = {<Lvl3 />} />
+       <Route path = "/progress/:language/lvl1/tttgame" element = {<TttGame />} />
+       <Route path = "/progress/:language/lvl2/memory-game" element = {<MemoryGameScreen />} />
+       <Route path = "/progress/:language/lvl3/lightsout" element = {<LightsOut />} />
+
      </Routes>
     </div>
   );
