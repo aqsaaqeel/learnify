@@ -1,4 +1,4 @@
-export const LevelThreeJS = () => {
+export const LevelFiveJS = () => {
   const explicitSnippet = `const obj = {
   name: 'John',
   age: 30,
@@ -30,7 +30,7 @@ obj.sayHi();`;
       <h1 className="text-4xl">
         Explicit and Implicit Binding in JavaScript
       </h1>
-      <p className="inline-block font-thin text-left items-start justify-start py-5 overflow-wrap break-word">
+      <p className="inline-block font-thin text-left items-start justify-start py-5">
         In JavaScript, there are two ways to bind the "this" keyword to an object: explicit binding and implicit binding. Here are some examples:
       </p>
       <ol className="inline-block font-thin text-left items-start justify-start py-1 list-decimal">

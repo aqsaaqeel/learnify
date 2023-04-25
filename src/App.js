@@ -2,9 +2,8 @@ import './App.css';
 import './index.css';
 import {Routes,Route} from "react-router-dom"
 import {Login,Landing,Signup,Home} from "./features"
-import { Dashboard, Progress, TttGame,Lvl1, Lvl2, MemoryGameScreen, LightsOut} from './pages';
+import { Dashboard, Progress, TttGame,Lvl1, Lvl2, Lvl3, Lvl4, Lvl5, MemoryGameScreen, LightsOut} from './pages';
 import { Navbar} from './component';
-import { Lvl3 } from './pages/lvl3/Lvl3';
 
 
 function App() {
@@ -21,6 +20,9 @@ function App() {
        <Route path = "/progress/:language/lvl1" element = {<Lvl1 />} />
        <Route path = "/progress/:language/lvl2" element = {<Lvl2 />} />
        <Route path = "/progress/:language/lvl3" element = {<Lvl3 />} />
+       <Route path = "/progress/:language/lvl4" element = {<Lvl4 />} />
+       <Route path = "/progress/:language/lvl5" element = {<Lvl5 />} />
+
        <Route path = "/lvl2" element = {<Lvl2 />} />
        <Route path = "/lvl3" element = {<Lvl3 />} />
        <Route path = "/progress/:language/lvl1/tttgame" element = {<TttGame />} />

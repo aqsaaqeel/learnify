@@ -4,7 +4,16 @@ import { Cell } from "./Cell";
 import { LightsOut } from "../../component/questions/lights-out/LightsOut";
 
 export const Board = ({ size }) => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  let [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  function moveToNextQuestion() {
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1); // update state with new value
+    } else {
+      setCurrentQuestionIndex(0); // start from beginning if at end of questions array
+    }
+  }
+  
+  
   const questions = [
     {
       question: "What is explicit binding in JavaScript?",
@@ -133,6 +142,7 @@ export const Board = ({ size }) => {
 
   const handleQuestionModalSubmit = () => {
     setShowQuestionModal(false);
+    moveToNextQuestion();
   };
 
   const gameEnds = () => {

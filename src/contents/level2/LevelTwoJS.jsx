@@ -5,6 +5,13 @@ export const LevelTwoJS = () => {
 
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
+      <iframe
+        width="420"
+        height="315"
+        src="https://youtu.be/XSl9ueOzecw"
+        className="p-5"
+        title="js-variables"
+      ></iframe>
       <h1 className="text-4xl">
         JavaScript Loops, Currying, Promises, and More
       </h1>
