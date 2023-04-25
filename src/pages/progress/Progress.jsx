@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { Sidebar } from "../../component";
 import { JsInst, PyInst, CppInst, JavaInst, CInst, RInst} from "../../contents";
 // import { Lvcpp1, Lvlpy1 } from "../../pages";
@@ -41,38 +41,38 @@ export const Progress = () => {
         </div>
         <div className="row-span-9 subheading text-center flex flex-wrap gap-10 justify-center p-10">
           {language === "javascript" ? (
-            <a href={`/progress/${language}/lvl1`}>
+            <Link to={`/progress/${language}/lvl1`}>
               <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
                 Level 1
               </div>
-            </a>
+            </Link>
           ) : (
-            <a href={`/progress/${language}/lvl1`}>
+            <Link to={`/progress/${language}/lvl1`}>
               <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
                 Level 1
               </div>
-            </a>
+            </Link>
           )}
-          <a href={`/progress/${language}/lvl2`}>
-            <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
+          <Link to={`/progress/${language}/lvl2`}>
+            <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
               Level 2
             </div>
-          </a>
-          <a href={`/progress/${language}/lvl3`}>
-            <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
+          </Link>
+          <Link to={`/progress/${language}/lvl3`}>
+            <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
               Level 3
             </div>
-          </a>
-          {/* <a href={`/progress/${language}/lvl1`}>
-            <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
+          </Link>
+          <Link to={`/progress/${language}/lvl4`}>
+            <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
               Level 4
             </div>
-          </a>
-          <a href={`/progress/${language}/lvl1`}>
-            <div className="language cursor-pointer hover:scale-125 bg-slate-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
+          </Link>
+          <Link to={`/progress/${language}/lvl5`}>
+            <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
               Level 5
             </div>
-          </a> */}
+          </Link>
         </div>
         {component}
       </div>
