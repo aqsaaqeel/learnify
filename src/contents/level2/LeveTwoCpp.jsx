@@ -58,15 +58,15 @@ export const LevelTwoCPlusPlus = () => {
             Copy Code
           </button>
         </div>
-        <li>
+        <li className="p-5">
           The size of an array in C++ is fixed at compile time and cannot be
           changed at runtime.
         </li>
-        <li>
+        <li className="p-5">
           Arrays in C++ can be passed as arguments to functions, returned from
           functions, and used in expressions.
         </li>
-        <li>
+        <li className="p-5">
           C++ provides several functions to work with arrays, such as the size
           function to get the number of elements in an array and the sort
           function to sort the elements of an array.
