@@ -25,7 +25,7 @@ export const LevelFourCpp = () => {
       <p className="inline-block font-thin text-left items-start justify-start py-5">
       In C++ programming, loops are used to execute a block of code repeatedly until a certain condition is met.It is same like C..{" "}
         <span className="text-blue-600 font-bold">
-          There are three types of loops in C: for loop, while loop and do-while loop.
+          There are three types of loops in C++: for loop, while loop and do-while loop.
         </span>
       </p>
       <h2 className="text-2xl">Important things to know about Loops</h2>
