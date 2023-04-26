@@ -86,12 +86,12 @@ export const LevelTwoPython = () => {
         Copy Code
         </button>
         </div>
-      <li>
+      <li className="p-5">
       A dictionary is created using curly braces {} and each key-value pair is separated by a colon :. 
       </li>
-      <li>The keys in a dictionary must be unique and immutable, such as strings or numbers, while the values can be of any data type.
+      <li className="p-5">The keys in a dictionary must be unique and immutable, such as strings or numbers, while the values can be of any data type.
       </li>
-      <li>
+      <li className="p-5">
       Dictionaries are a useful data structure in Python, and they are commonly used for tasks such as counting occurrences of items or storing configuration settings.
       </li>
       <li className="p-5">
@@ -117,10 +117,10 @@ export const LevelTwoPython = () => {
         Copy Code
         </button>
         </div>
-        <li>
+        <li className="p-5">
         Tuples can contain elements of different data types, including numbers, strings, and other objects
         </li>
-        <li>
+        <li className="p-5">
         Tuples are often used when you want to group related data together, but you don't want that data to be modified accidentally or intentionally.
         </li>
       </ol>
