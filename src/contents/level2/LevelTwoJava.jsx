@@ -72,6 +72,5 @@ return (
           method to sort the elements of an array.
           </li>
           </ol>
-          </div>
-          );
-          };
+         </div>
+)};
