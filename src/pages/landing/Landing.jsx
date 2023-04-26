@@ -11,7 +11,7 @@ export const Landing = () => {
         <h4 className="text-5xl md:text-2xl xl:text-2xl font-bold tracking-tight mb-12">
           Gamifies learning concepts to make programming easier
         </h4>
-        <h2 className="text-5xl md:text-2xl xl:text-2xl font-bold tracking-tight mb-12">
+        {/* <h2 className="text-5xl md:text-2xl xl:text-2xl font-bold tracking-tight mb-12">
           How does this work?
         </h2>
         <p className=" tracking-tight mb-12">
@@ -24,8 +24,8 @@ export const Landing = () => {
           each denoted by a verb that indicates the type of thinking or
           cognitive activity involved.
         </p>
-        {/* Knowledge - recalling previously learned information or facts
-Comprehension - understanding or interpreting the meaning of information */}
+        Knowledge - recalling previously learned information or facts
+Comprehension - understanding or interpreting the meaning of information 
         <p className="font-bold tracking-tight mb-5">
           We are implementing the first two that are:{" "}
         </p>
@@ -35,7 +35,7 @@ Comprehension - understanding or interpreting the meaning of information */}
             Comprehension - understanding or interpreting the meaning of
             information
           </li>
-        </ul>
+        </ul> */}
         <a
           className="inline-block px-7 py-3 mr-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
           data-mdb-ripple="true"

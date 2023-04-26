@@ -11,7 +11,17 @@ export const Dashboard = () => {
           <span className="font-bold text-4xl p-1">Welcome,</span> student!
         </div>
         <div className="row-span-1 text-2xl subheading text-center font-bold">
-          Pick a language
+          Go through this general course
+        </div>
+        <div className="flex justify-center">
+          <Link to="/progress/c">
+            <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
+              General Concepts
+            </div>
+          </Link>
+        </div>
+        <div className="row-span-1 text-2xl subheading text-center font-bold">
+          or, Pick a language
         </div>
         <div className="row-span-9 subheading text-center flex flex-wrap gap-10 justify-center p-10">
           <Link to="/progress/c">
@@ -85,7 +95,12 @@ export const Dashboard = () => {
         </div>
         <div className="font-medium">
           Confused which language to pick? Read this blog to get some clarity{" "}
-          <a href="https://smartbear.com/blog/best-programming-language-to-learn-first/" className="text-blue-600 cursor-pointer underline">Best language for beginner.</a>
+          <a
+            href="https://smartbear.com/blog/best-programming-language-to-learn-first/"
+            className="text-blue-600 cursor-pointer underline"
+          >
+            Best language for beginner.
+          </a>
         </div>
         <div className="hidden sm:flex justify-center">
           <iframe

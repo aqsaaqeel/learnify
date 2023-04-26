@@ -2,7 +2,7 @@ import './App.css';
 import './index.css';
 import {Routes,Route} from "react-router-dom"
 import {Login,Landing,Signup,Home} from "./features"
-import { Dashboard, Progress, TttGame,Lvl1, Lvl2, Lvl3, Lvl4, Lvl5, MemoryGameScreen, LightsOut} from './pages';
+import { Dashboard, Progress, TttGame,Lvl1, Lvl2, Lvl3, Lvl4, Lvl5, MemoryGameScreen, LightsOut, FillInBlanks} from './pages';
 import { Navbar} from './component';
 
 
@@ -28,6 +28,7 @@ function App() {
        <Route path = "/progress/:language/lvl1/tttgame" element = {<TttGame />} />
        <Route path = "/progress/:language/lvl2/memory-game" element = {<MemoryGameScreen />} />
        <Route path = "/progress/:language/lvl3/lightsout" element = {<LightsOut />} />
+       <Route path = "/progress/:language/lvl4/fillinblanks" element = {<FillInBlanks />} />
 
      </Routes>
     </div>
