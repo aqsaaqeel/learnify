@@ -5,7 +5,7 @@ char initial = 'J';
 export const LevelTwoJava = () => {
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
-      <h1 className="text-4xl">What are variables?</h1>
+      <h1 className="text-4xl">Arrays</h1>
       <p className="inline-block font-thin text-left items-start justify-start py-5">
         In Java, a variable is a named storage location that holds a value of a
         specific data type. Like C and C++, a variable in Java has a data type
