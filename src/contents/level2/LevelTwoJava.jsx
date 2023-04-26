@@ -58,11 +58,11 @@ return (
           Copy Code
           </button>
           </div>
-          <li>
+          <li className="p-5">
           The size of an array in Java is fixed at compile time and cannot be
           changed at runtime.
           </li>
-          <li>
+          <li className="p-5">
           Arrays in Java can be passed as arguments to methods, returned from
           methods, and used in expressions.
           </li>
