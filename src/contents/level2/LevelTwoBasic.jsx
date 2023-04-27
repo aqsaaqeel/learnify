@@ -10,7 +10,7 @@ export const LevelTwoBasic = () => {
         The values are stored in a contiguous (i.e., side-by-side) block of memory, and each value is accessed using an index number.
         </span>
       </p>
-      <h2 className="text-2xl">Important things to know about variables</h2>
+      <h2 className="text-2xl">Important things to know about Arrays</h2>
       <ol className="inline-block font-thin text-left items-start justify-start py-1 list-decimal">
         <li className="p-5">
         For example, let's say you're writing a program to store a list of numbers. Instead of creating a separate variable for each number, you can create an array that can hold multiple numbers at once:
