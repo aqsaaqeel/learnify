@@ -6,7 +6,6 @@ export const LevelOneBasic = () => {
       <h1 className="text-4xl">What are variables?</h1>
       <p className="inline-block font-thin text-left items-start justify-start py-5">
       In programming, a variable is a way to store a piece of information that can be used and modified later on. 
-      Think of it as a labeled container that can hold a value or a piece of data.
         <span className="text-blue-600 font-bold">
         Think of it as a labeled container that can hold a value or a piece of data.
         </span>
