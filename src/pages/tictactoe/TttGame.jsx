@@ -1,16 +1,20 @@
 import { Sidebar, TicTacToe } from "../../component";
 import { Square } from "./Square";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { useScores } from "../../context/ScoreContext";
 import {
   JsQuestions,
   PyQuestions,
 } from "../../contents/tictactoe-questions/tittactoeQuestions";
 const defaultSquares = () => new Array(9).fill(null);
 
+
 export const TttGame = () => {
+  const {scores, setScores} = useScores();
   const [showModal, setShowModal] = useState(false);
   const [squares, setSquares] = useState(defaultSquares());
+  const [currScore, setCurrScore] = useState(0);
   const [currentSquareIndex, setCurrentSquareIndex] = useState(0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [hasWon, setHasWon] = useState(false);
@@ -23,24 +27,6 @@ export const TttGame = () => {
   } else if (language === "python") {
     questions = PyQuestions;
   }
-  console.log(JsQuestions, PyQuestions);
-  console.log(questions);
-
-  // const questions = [
-  //   { Ques: "What is a variable?", Ans: "storage" },
-  //   {
-  //     Ques: "What are the three keywords for declaring variables in JavaScript?",
-  //     Ans: "let const var",
-  //   },
-  //   {
-  //     Ques: "Are let and const block-scoped or function-scoped?",
-  //     Ans: "block scoped",
-  //   },
-  //   {
-  //     Ques: "Are var variables block-scoped or function-scoped?",
-  //     Ans: "function scoped",
-  //   },
-  // ];
 
   const lines = [
     [0, 1, 2],
@@ -68,7 +54,22 @@ export const TttGame = () => {
     setSquares(newSquares);
   };
 
+  const updateScore = (newLevel1Score) => {
+    setScores((prevScores) => {
+      const newTotal = prevScores.total - prevScores.level1 + newLevel1Score;
+      return {
+        ...prevScores,
+        level1: newLevel1Score,
+        total: newTotal,
+      };
+    });
+  };
+  
+  
+
   useEffect(() => {
+    updateScore(currScore);
+
     const isComputerTurn =
       squares.filter((square) => square !== null).length % 2 === 1;
 
@@ -80,9 +81,13 @@ export const TttGame = () => {
     const computerWon = linesThatAre("O", "O", "O").length > 0;
 
     if (playerWon) {
+      setCurrScore(currScore => currScore + 5);
+      updateScore(currScore);
       setHasWon(true);
+      console.log(scores);
       setWinner("Player");
       return;
+      
     }
 
     if (computerWon) {
@@ -167,8 +172,16 @@ export const TttGame = () => {
               />
             )}
           </div>{" "}
-          {console.log(winner)}
-          {hasWon && <h1>{winner} won the game!</h1>}
+          {hasWon && <h1 className="pb-5">{winner} won the game!</h1>}
+          {hasWon && <Link
+          className="inline-block px-7 py-3 mr-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          data-mdb-ripple="true"
+          data-mdb-ripple-color="light"
+          to={`/progress/${language}/lvl2`}
+          role="button"
+        >
+          Proceed to next Level
+        </Link>}
         </div>
       </div>
     </div>
