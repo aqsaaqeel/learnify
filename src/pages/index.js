@@ -10,3 +10,4 @@ export * from "./lvl1/Lvl1";
 export * from "./lvl3/Lvl3";
 export * from "./lvl4/Lvl4";
 export * from "./lvl5/Lvl5";
+export * from "./scoreboard/Scorebaord"

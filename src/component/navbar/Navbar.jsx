@@ -1,8 +1,10 @@
 import { useState } from "react";
 import React from "react";
-
+import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const {loginWithRedirect} = useAuth0();
   return (
     <nav className="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
       <div className="px-6 w-full flex flex-wrap items-center justify-between">
@@ -48,11 +50,18 @@ export const Navbar = () => {
           focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light"
+            onClick={() =>
+              loginWithRedirect({
+                authorizationParams: {
+                  redirect_uri: `${window.location.origin}/`
+                }
+              })
+            }
           >
             Login
           </button>
 
-          <button
+          <Link to="/scoreboard"><button
             type="button"
             className="inline-block px-6 py-2.5 bg-blue-600 text-white 
           font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg
@@ -62,7 +71,7 @@ export const Navbar = () => {
             data-mdb-ripple-color="light"
           >
             ScoreBoard
-          </button>
+          </button></Link>
         </div>
       </div>
     </nav>
