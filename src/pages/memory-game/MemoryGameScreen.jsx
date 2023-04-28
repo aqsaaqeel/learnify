@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Sidebar, MemoryGame, WinningModal } from "../../component";
 import { Card } from "./Card";
+import {Link, useParams} from 'react-router-dom'
 import "./lvl2.css";
+import { useScores } from "../../context/ScoreContext";
 export const MemoryGameScreen = () => {
   const [showModal, setShowModal] = useState(false);
+  const [currScore, setCurrScore] = useState(0);
+  const { scores, setScores } = useScores();
+  const { language } = useParams();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [cardItem, setCardItem] = useState([
     {
@@ -120,17 +125,20 @@ export const MemoryGameScreen = () => {
       Ans: "exit contolled",
     },
   ]);
-  const [setCompleted] = useState(false);
+
+  // const [setCompleted] = useState(false);
   const [showWonModal, setShowWonModal] = useState(false);
   const handleClick = (id) => {
     const index = cardItem.findIndex((item) => item.id === id);
     cardItem[index].state = "active";
     setCardItem([...cardItem]);
-    const questionIndex = cardItem.findIndex((item) => item.id === id && item.Ques);
+    const questionIndex = cardItem.findIndex(
+      (item) => item.id === id && item.Ques
+    );
     setCurrentQuestionIndex(questionIndex);
     setTimeout(() => setShowModal(true), 1000);
   };
-  
+
   const handleAnswer = (userAnswer) => {
     if (userAnswer === cardItem[currentQuestionIndex].Ans) {
       // cardItem.forEach((item, index) => {
@@ -162,14 +170,30 @@ export const MemoryGameScreen = () => {
       alert("wrong answer, correct answer is");
       console.log(cardItem[currentQuestionIndex].Ans);
     }
+
     const allCardsTurned = cardItem.every((item) => item.state === "active");
     if (allCardsTurned) {
+      setCurrScore((currScore) => currScore + 5);
+      updateScore(currScore);
       // Show the "you won" modal
       setShowWonModal(true);
-      setCompleted(true);
-      console.log("you won")
+      console.log("you won");
+      console.log(scores);
     }
   };
+  const updateScore = (newLevel1Score) => {
+    setScores((prevScores) => {
+      const newTotal = prevScores.total - prevScores.level1 + newLevel1Score;
+      return {
+        ...prevScores,
+        level2: newLevel1Score,
+        total: newTotal,
+      };
+    });
+  };
+  useEffect(() => {
+    updateScore(currScore);
+  }, [currScore]);
   return (
     <div className="flex h-screen">
       <div className="flex-none bg-gray-200 w-1/6">
@@ -200,7 +224,7 @@ export const MemoryGameScreen = () => {
                 question={cardItem[currentQuestionIndex].Ques}
               />
             )}
-            {showWonModal && <WinningModal /> }
+            {showWonModal && <WinningModal src={`/progress/${language}/lvl3`} />}
           </div>
         </div>
       </div>
