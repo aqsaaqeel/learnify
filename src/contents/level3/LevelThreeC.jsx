@@ -1,5 +1,9 @@
-const codeSnippet = `int x = 10; float = 20.008; 
-char initial = 'J';`;
+const codeSnippetifelse = `if (x > 10) { printf("x is greater than 10"); } else if (x < 10) { printf("x is less than 10"); } else { printf("x is equal to 10"); }`;
+
+const codeSnippetternaryoperator = `int x = 10;
+int y = 20;
+int max = (x > y) ? x : y`; 
+
 export const LevelThreeC = () => {
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
@@ -79,5 +83,9 @@ export const LevelThreeC = () => {
         </li>
       </ol>
     </div>
-  );
-};
+    <li className="p-5">
+    In this example, the condition expression one which is x greater than y is evaluated, which is false since x is not greater than y. Therefore, the second expression y is evaluated and its value is assigned to the variable max.
+    </li>
+  </ol>
+</div>
+)};

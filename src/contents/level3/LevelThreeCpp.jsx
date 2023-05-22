@@ -1,6 +1,6 @@
-const codeSnippet = `int x = 10; string y = "hello";
-float height = 1.75;
-char initial = 'J';   `;
+const codeSnippetifelse = `if (x > 10) { cout << "x is greater than 10"; } else if (x < 10) { cout << "x is less than 10"; } else { cout << "x is equal to 10"; };   `;
+const codeSnippetternaryoperator = `int x = 10; int y = 20; int max = (x > y) ? x : y`
+
 export const LevelThreeCpp = () => {
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
@@ -102,5 +102,38 @@ export const LevelThreeCpp = () => {
         </li>
       </ol>
     </div>
+    <li className="p-5">
+    Ternary Operator is a shorthand conditional operator in many programming languages, including C. 
+    </li>
+    <li className="p-5">
+    It allows you to write an if-else statement in a compact, single line of code.
+    </li>
+    <li className="p-5">
+    The ternary operator has three parts:
+    <ul>
+      <li>A condition that evaluates to either true or false.</li>
+      <li>An expression that gets evaluated if the condition is true.</li>
+      <li>An expression that gets evaluated if the condition is false.</li>
+    </ul>
+    </li>
+    <li className="p-5">
+      Here's an example of using Ternary operator in C:
+    </li>
+    <div className="bg-gray-100 p-4 rounded-md my-7">
+      <pre>
+        <code className="text-sm font-mono">{codeSnippetternaryoperator}</code>
+      </pre>
+      <button
+        onClick={() => navigator.clipboard.writeText(codeSnippetternaryoperator)}
+        className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Copy Code
+      </button>
+    </div>
+    <li className="p-5">
+    In this example, the condition expression one which is x greater than y is evaluated, which is false since x is not greater than y. Therefore, the second expression y is evaluated and its value is assigned to the variable max.
+    </li>
+  </ol>
+</div>
   );
 };

@@ -1,7 +1,36 @@
-const codeSnippet = `int age = 25;
-float height = 1.75f;
-char initial = 'J';
-   `;
+const codeSnippetif = `int x = 10;
+if (x > 5) {
+   System.out.println("x is greater than 5");
+}
+`;
+
+const codeSnippetifelse = `int age = 18;
+
+if (age >= 18) {
+  System.out.println("You are an adult");
+} else {
+  System.out.println("You are not an adult yet");
+} `;
+
+const codeSnippetternory = `int x = 5;
+int y = 10;
+int result = (x > y) ? x : y; `;
+
+const codeSnippetswitch = `int day = 2;
+switch (day) {
+   case 1:
+      System.out.println("Monday");
+      break;
+   case 2:
+      System.out.println("Tuesday");
+      break;
+   case 3:
+      System.out.println("Wednesday");
+      break;
+   default:
+      System.out.println("Invalid day");
+}`;
+
 export const LevelThreeJava = () => {
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
@@ -15,86 +44,94 @@ export const LevelThreeJava = () => {
       </div>
       <h1 className="text-4xl">What are variables?</h1>
       <p className="inline-block font-thin text-left items-start justify-start py-5">
-        In Java, a variable is a named storage location that holds a value of a
-        specific data type. Like C and C++, a variable in Java has a data type
-        that determines the type of data that can be stored in it, and the value
-        stored in a variable can be changed during the execution of the program.{" "}
+      In Java, a conditional statement is a programming construct that allows a program to execute different sets of statements based on the evaluation of a Boolean expression.
+      {" "}
         <span className="text-blue-600 font-bold">
-          In Java, variables are strongly typed, meaning that each variable has
-          a specific data type that determines what kind of data can be stored
-          in it. Java also supports reference variables, which are variables
-          that refer to objects in memory.
+        In Java, there are several types of conditional statements, including if, if-else, if-else-if, switch, and ternary operator.
         </span>
       </p>
-      <h2 className="text-2xl">Important things to know about variables</h2>
+      <h2 className="text-2xl">Important things to know about Conditional Statements</h2>
       <ol className="inline-block font-thin text-left items-start justify-start py-1 list-decimal">
         <li className="p-5">
-          Java has a wide range of built-in data types, including integers,
-          floating-point numbers, characters, and boolean values. It also allows
-          you to define custom data types using classes and interfaces.
+        The if statement is used to execute a block of code only when a certain condition is true.
         </li>
         <li className="p-5">
-          Variables in Java must be declared before they can be used, and you
-          can also initialize them at the same time you declare them. If a
-          variable is not initialized, it will contain a default value depending
-          on its data type.
+        If the condition in the parentheses is true, the code inside the curly braces will be executed. If the condition is false, the code inside the curly braces will be skipped.
         </li>
         <li className="p-5">
-          The scope of a variable in Java is determined by where it is declared
-          in the program. Variables declared inside a block of code are only
-          visible inside that block, while variables declared outside of any
-          block (class level variables) are visible to the entire class.
+          Here's an example of if statement.
         </li>
-        <li className="p-5">
-          Java allows you to declare variables as final using the final keyword.
-          Once a variable is declared as `final`, its value cannot be changed.
-        </li>
-        <li className="p-5">
-          Java allows you to declare class-level variables as `static` using the
-          static keyword. Static variables belong to the class rather than any
-          instance of the class, and they can be accessed using the class name.
-        </li>
-        <li className="p-5">
-          Java also allows you to declare constants using the `final` keyword. A
-          constant is a variable whose value cannot be changed after it is
-          initialized.
-        </li>
-        <li className="p-5">
-          Java allows you to convert a variable from one data type to another
-          using typecasting. Typecasting can be used to convert between built-in
-          data types, as well as to convert between custom data types.
-        </li>
-        <li className="p-5">
-          Java supports arrays, which are collections of variables of the same
-          data type. Arrays are declared using square brackets.
-        </li>
-        <li className="p-5">
-          In Java, reference variables are variables that refer to objects in
-          memory. Reference variables are declared using the class name, and
-          they can be used to access the properties and methods of the object
-          they refer to.
-        </li>
-        <li className="p-5">
-          To declare a variable in Java, you specify its type and name. You can
-          also initialize a variable at the same time you declare it, like this:
-        </li>
-
         <div className="bg-gray-100 p-4 rounded-md my-7">
           <pre>
-            <code className="text-sm font-mono">{codeSnippet}</code>
+            <code className="text-sm font-mono">{codeSnippetif}</code>
           </pre>
           <button
-            onClick={() => navigator.clipboard.writeText(codeSnippet)}
+            onClick={() => navigator.clipboard.writeText(codeSnippetif)}
             className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
             Copy Code
           </button>
         </div>
         <li className="p-5">
-          In Java, variables that refer to objects are automatically managed by
-          the garbage collector, which frees up memory used by objects that are
-          no longer needed. This means that Java programmers do not need to
-          worry about manually freeing memory, as they would in C or C++.
+        In this example, the code inside the curly braces will be executed because the value of x is greater than 5.
+        </li>
+        <li className="p-5">
+        The if-else statement is used to execute one block of code if a certain condition is true, and another block of code if the condition is false.
+        </li>
+        <li className="p-5">
+        If the condition in the parentheses is true, the code inside the first set of curly braces will be executed.
+        If the condition is false, the code inside the second set of curly braces will be executed.
+        </li>
+        <div className="bg-gray-100 p-4 rounded-md my-7">
+          <pre>
+            <code className="text-sm font-mono">{codeSnippetifelse}</code>
+          </pre>
+          <button
+            onClick={() => navigator.clipboard.writeText(codeSnippetifelse)}
+            className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Copy Code
+          </button>
+        </div>
+        <li className="p-5">
+        In this example, the code inside the second set of curly braces will be executed because the value of x is less than or equal to 5.
+        </li>
+        <li className="p-5">
+        The switch statement is used to execute different blocks of code based on the value of a variable.
+        </li>
+        <li  className="p-5">
+        The switch statement evaluates the value of the variable and executes the code inside the case block that matches the value. If no case matches the value, the code inside the default block will be executed.
+        </li>
+        <div className="bg-gray-100 p-4 rounded-md my-7">
+          <pre>
+            <code className="text-sm font-mono">{codeSnippetswitch}</code>
+          </pre>
+          <button
+            onClick={() => navigator.clipboard.writeText(codeSnippetswitch)}
+            className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Copy Code
+          </button>
+        </div>
+        <li className="p-5">
+        In this example, the code inside the second case block will be executed because the value of the day variable is 2, so the output will be "Tuesday". If the value of day was not 1, 2, or 3, the code inside the default block would be executed and the output would be "Invalid day".
+        </li>
+        <li className="p-5">
+        the ternary operator (also known as the conditional operator) is a shorthand way of writing an if-else statement. It takes three operands: a Boolean expression, a value for the true case, and a value for the false case.
+        </li>
+        <div className="bg-gray-100 p-4 rounded-md my-7">
+          <pre>
+            <code className="text-sm font-mono">{codeSnippetternory}</code>
+          </pre>
+          <button
+            onClick={() => navigator.clipboard.writeText(codeSnippetternory)}
+            className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Copy Code
+          </button>
+        </div>
+        <li className="p-5">
+        Here, the condition x is greater tha y evaluates to false since x is not greater than y. Therefore, the expression returns the value y, which is assigned to the variable result
         </li>
       </ol>
     </div>

@@ -1,7 +1,6 @@
-const codeSnippet = `int age = 25;
-float height = 1.75f;
-char initial = 'J';
-   `;
+const codeSnippet = `int[] arr = {10, 20, 30, 40, 50}; 
+float[] floatArr = {20.008f, 30.5f, 40.2f}; 
+char[] charArr = {'J', 'o', 'h', 'n'};`;
 export const LevelTwoJava = () => {
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
@@ -81,22 +80,28 @@ export const LevelTwoJava = () => {
 
         <div className="bg-gray-100 p-4 rounded-md my-7">
           <pre>
-            <code className="text-sm font-mono">{codeSnippet}</code>
+          <code className="text-sm font-mono">{codeSnippet}</code>
           </pre>
           <button
-            onClick={() => navigator.clipboard.writeText(codeSnippet)}
-            className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onClick={() => navigator.clipboard.writeText(codeSnippet)}
+          className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
-            Copy Code
+          Copy Code
           </button>
-        </div>
-        <li className="p-5">
-          In Java, variables that refer to objects are automatically managed by
-          the garbage collector, which frees up memory used by objects that are
-          no longer needed. This means that Java programmers do not need to
-          worry about manually freeing memory, as they would in C or C++.
-        </li>
-      </ol>
-    </div>
-  );
-};
+          </div>
+          <li className="p-5">
+          The size of an array in Java is fixed at compile time and cannot be
+          changed at runtime.
+          </li>
+          <li className="p-5">
+          Arrays in Java can be passed as arguments to methods, returned from
+          methods, and used in expressions.
+          </li>
+          <li>
+          Java provides several methods to work with arrays, such as the length
+          property to get the number of elements in an array and the sort
+          method to sort the elements of an array.
+          </li>
+          </ol>
+         </div>
+)};

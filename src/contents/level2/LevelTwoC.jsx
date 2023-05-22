@@ -1,5 +1,6 @@
-const codeSnippet = `int x = 10; float = 20.008; 
-char initial = 'J';`;
+const codeSnippet = `int nums[5] = {10, 20, 30, 40, 50}; 
+float prices[3] = {10.99, 20.49, 30.79}; 
+char initials[3] = {'J', 'D', 'S'};`;
 export const LevelTwoC = () => {
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
@@ -13,49 +14,49 @@ export const LevelTwoC = () => {
       </div>
       <h1 className="text-4xl">What are variables?</h1>
       <p className="inline-block font-thin text-left items-start justify-start py-5">
-        In C, a variable is a named memory location that is used to store a
-        value of a certain type. The value stored in a variable can be changed
-        during the execution of the program..{" "}
+        In C, an array is a collection of values of the same type, stored in
+        contiguous memory locations. Each value in an array is called an
+        element.{" "}
         <span className="text-blue-600 font-bold">
-          To declare a variable in C, you specify its type and name. You can
-          also initialize a variable at the same time you declare it.
+          To declare an array in C, you specify its type, name, and size in
+          square brackets. You can also initialize an array at the same time you
+          declare it.
         </span>
       </p>
-      <h2 className="text-2xl">Important things to know about variables</h2>
+      <h2 className="text-2xl">Important things to know about arrays</h2>
       <ol className="inline-block font-thin text-left items-start justify-start py-1 list-decimal">
         <li className="p-5">
-          Variables are used to store values in C programs.
+          Arrays are used to store collections of values in C programs.
         </li>
         <li className="p-5">
-          A variable must be declared before it can be used. The declaration
-          specifies the variable's name and data type.
+          An array must be declared before it can be used. The declaration
+          specifies the array's name, data type, and size.
         </li>
         <li className="p-5">
-          The data type of a variable determines the kind of values it can hold
-          and the operations that can be performed on it.
+          The size of an array determines the number of elements it can hold.
         </li>
         <li className="p-5">
-          In C, there are several data types available for variables, including
+          In C, there are several data types available for arrays, including
           int, float, double, char, and more.
         </li>
         <li className="p-5">
-          Variables can be assigned new values using the assignment operators
-          '='.
+          Elements in an array can be accessed using their index, which starts
+          at 0.
         </li>
         <li className="p-5">
-          In C, variables can be passed as arguments to functions, returned from
+          In C, arrays can be passed as arguments to functions, returned from
           functions, and used in expressions.
         </li>
         <li className="p-5">
-          Variables in C are case sensitive. For Example, x and X are two
-          different variables.
+          Arrays in C are case sensitive. For Example, nums and Nums are two
+          different arrays.
         </li>
         <li className="p-5">
-          Variables in C have a scope, which determines where in the program
-          variable can be used. This scope can be local, function or global.
+          Arrays in C have a scope, which determines where in the program the
+          array can be used. This scope can be local, function or global.
         </li>
         <li className="p-5">
-          Variables in C can be initialized with a value when they are declared.
+          Arrays in C can be initialized with values when they are declared.
           like this,
         </li>
 
@@ -70,13 +71,6 @@ export const LevelTwoC = () => {
             Copy Code
           </button>
         </div>
-        <li>
-          The lifetime of a variable in C depends on its scope. Local variables
-          have a lifetime that corresponds to the duration of the block in which
-          they are defined. Function parameters and local variables are
-          automatically destroyed when the function returns. Global variables
-          have a lifetime that corresponds to the duration of the program.
-        </li>
       </ol>
     </div>
   );

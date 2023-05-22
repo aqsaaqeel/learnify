@@ -1,4 +1,4 @@
-const codeSnippet = `int x = 10; float = 20.008; 
+const codeSnippet = `int x = 10; float y = 20.008; 
 char initial = 'J';`;
 export const LevelOneC = () => {
   
