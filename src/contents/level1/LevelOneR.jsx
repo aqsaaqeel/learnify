@@ -4,6 +4,14 @@ export const LevelOneR = () => {
                         initial <- "J"`;
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
+      <div className="flex justify-center pb-10">
+        <iframe
+          width="420"
+          height="315"
+          src="https://www.youtube.com/embed/GX1uaYgmexg"
+          title="js-level1"
+        ></iframe>
+      </div>
       <h1 className="text-4xl">What are variables?</h1>
       <p className="inline-block font-thin text-left items-start justify-start py-5">
         In R, a variable is a named object that can store a value of a certain type. The value stored in a variable can be changed during the execution of the program.{" "}

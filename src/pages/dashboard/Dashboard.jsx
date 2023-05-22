@@ -24,6 +24,17 @@ export const Dashboard = () => {
           or, Pick a language
         </div>
         <div className="row-span-9 subheading text-center flex flex-wrap gap-10 justify-center p-10">
+        <Link to="/progress/javascript">
+            <div>Javascript</div>
+            <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
+              <img
+                src="https://i.ibb.co/p420x8r/javascript-logo.jpg"
+                alt="javascript-logo"
+                border="0"
+                className="w-10"
+              />
+            </div>
+          </Link>
           <Link to="/progress/c">
             <div>C</div>
             <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
@@ -69,17 +80,7 @@ export const Dashboard = () => {
               />
             </div>
           </Link>
-          <Link to="/progress/javascript">
-            <div>Javascript</div>
-            <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">
-              <img
-                src="https://i.ibb.co/p420x8r/javascript-logo.jpg"
-                alt="javascript-logo"
-                border="0"
-                className="w-10"
-              />
-            </div>
-          </Link>
+
           <Link to="/progress/r">
             <div>R</div>
             <div className="language cursor-pointer hover:scale-125 bg-blue-400 w-48 h-24 flex justify-center items-center rounded-lg text-zinc-100">

@@ -1,8 +1,25 @@
 const codeSnippet = `int x = 10; float = 20.008; 
 char initial = 'J';`;
 export const LevelOneC = () => {
+  
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
+      <div className="flex flex-col justify-center pb-10">
+        <iframe
+          width="420"
+          height="315"
+          src="https://www.youtube.com/embed/GX1uaYgmexg"
+          title="js-level1"
+        ></iframe>
+
+        <div className="flex items-center space-x-2 mt-10">
+          <p className="text-gray-500">Listen to audio explanation instead: </p>
+          <audio controls>
+            <source src="/datatypes_JS.mp3" type="audio/mpeg" />
+            
+          </audio>
+        </div>
+      </div>
       <h1 className="text-4xl">What are variables?</h1>
       <p className="inline-block font-thin text-left items-start justify-start py-5">
         In C, a variable is a named memory location that is used to store a
