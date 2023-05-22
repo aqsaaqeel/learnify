@@ -27,6 +27,14 @@ obj.sayHi();`;
 
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
+      <div className="flex justify-center pb-10">
+        <iframe
+          width="420"
+          height="315"
+          src="https://www.youtube.com/embed/GX1uaYgmexg"
+          title="js-level1"
+        ></iframe>
+      </div>
       <h1 className="text-4xl">
         Explicit and Implicit Binding in JavaScript
       </h1>

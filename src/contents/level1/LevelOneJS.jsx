@@ -2,11 +2,12 @@ const codeSnippet = `let x = 10;  const y = "hello";`;
 export const LevelOneJS = () => {
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
-      <div className="flex justify-center pb-10">
+      <div className="flex flex-col justify-center pb-10">
         <iframe
           width="420"
           height="315"
-          src="https://www.youtube.com/embed/GX1uaYgmexg"
+          src="https://www.youtube.com/embed/y9M7DWLkKuw"
+          
           title="js-level1"
         ></iframe>
       </div>

@@ -1,5 +1,6 @@
 import { Sidebar } from "../../component";
 import { Link, useParams } from "react-router-dom";
+import { AudioPlayer } from "./AudioPlayer";
 import { LevelOneJS, LevelOneJava, LevelOnePython, LevelOneC, LevelOneCpp, LevelOneR } from "../../contents/level1";
 export const Lvl1 = () => {
   let component;
@@ -29,11 +30,14 @@ export const Lvl1 = () => {
           <div className="row-span-1 welcome-text text-3xl flex p-5 items-center">
             <span className="font-bold text-4xl p-2">Level 1:</span> {language}
           </div>
+          <div>
+            <AudioPlayer />
           <Link to={`/progress/${language}/lvl1/tttgame`}>
             <button className="px-10 py-4 bg-blue-500 text-zinc-50 m-5 rounded-md ">
               Start Game
             </button>
           </Link>
+          </div>
         </div>
         {component}
       </div>

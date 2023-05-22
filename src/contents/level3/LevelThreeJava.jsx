@@ -34,7 +34,15 @@ switch (day) {
 export const LevelThreeJava = () => {
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
-      <h1 className="text-4xl">Conditional Statements</h1>
+      <div className="flex justify-center pb-10">
+        <iframe
+          width="420"
+          height="315"
+          src="https://www.youtube.com/embed/GX1uaYgmexg"
+          title="js-level1"
+        ></iframe>
+      </div>
+      <h1 className="text-4xl">What are variables?</h1>
       <p className="inline-block font-thin text-left items-start justify-start py-5">
       In Java, a conditional statement is a programming construct that allows a program to execute different sets of statements based on the evaluation of a Boolean expression.
       {" "}
