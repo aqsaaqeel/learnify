@@ -23,7 +23,15 @@ else:
 export const LevelThreePython = () => {
   return (
     <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
-      <h1 className="text-4xl">Conditional Statements</h1>
+      <div className="flex justify-center pb-10">
+        <iframe
+          width="420"
+          height="315"
+          src="https://www.youtube.com/embed/GX1uaYgmexg"
+          title="js-level1"
+        ></iframe>
+      </div>
+      <h1 className="text-4xl">What are variables?</h1>
       <p className="inline-block font-thin text-left items-start justify-start py-5">
       In Python, conditional statements allow you to control the flow of your program based on certain conditions.{" "}
         <span className="text-blue-600 font-bold">

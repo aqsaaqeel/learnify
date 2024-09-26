@@ -2,52 +2,83 @@ const codeSnippet = `int[] arr = {10, 20, 30, 40, 50};
 float[] floatArr = {20.008f, 30.5f, 40.2f}; 
 char[] charArr = {'J', 'o', 'h', 'n'};`;
 export const LevelTwoJava = () => {
-return (
-          <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
-          <iframe
-              width="420"
-              height="315"
-              src=""
-              className="p-5"
-              title="java-arrays"
-            ></iframe>
-          <h1 className="text-4xl">
-              Arrays
-          </h1>
-          <p className="inline-block font-thin text-left items-start justify-start py-5">
-          In Java, an array is a collection of elements of the same type, stored
-          in a contiguous memory location. The size and type of the array are
-          fixed at compile time.{" "}
-          <span className="text-blue-600 font-bold">
-          To declare an array in Java, you specify the type of elements it
-          contains and the number of elements it can hold. You can also
-          initialize an array with a list of values enclosed in braces.
-          </span>
-          </p>
-          <h2 className="text-2xl">Important things to know about arrays</h2>
-          <ol className="inline-block font-thin text-left items-start justify-start py-1 list-decimal">
-          <li className="p-5">
-          Arrays are used to store multiple values of the same type in Java
-          programs.
-          </li>
-          <li className="p-5">
-          An array must be declared before it can be used. The declaration
-          specifies the type of elements the array contains and the number of
-          elements it can hold.
-          </li>
-          <li className="p-5">
-          The elements of an array can be accessed using an index. Array indexes
-          start from zero in Java.
-          </li>
-          <li className="p-5">
-          In Java, there are several types of arrays available, including
-          arrays of integers, floating-point numbers, characters, and more.
-          </li>
-          <li className="p-5">
-          Arrays can be initialized with a list of values enclosed in braces.
-          For Example,
-          </li>
-          <div className="bg-gray-100 p-4 rounded-md my-7">
+  return (
+    <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
+      <div className="flex justify-center pb-10">
+        <iframe
+          width="420"
+          height="315"
+          src="https://www.youtube.com/embed/GX1uaYgmexg"
+          title="js-level1"
+        ></iframe>
+      </div>
+      <h1 className="text-4xl">What are variables?</h1>
+      <p className="inline-block font-thin text-left items-start justify-start py-5">
+        In Java, a variable is a named storage location that holds a value of a
+        specific data type. Like C and C++, a variable in Java has a data type
+        that determines the type of data that can be stored in it, and the value
+        stored in a variable can be changed during the execution of the program.{" "}
+        <span className="text-blue-600 font-bold">
+          In Java, variables are strongly typed, meaning that each variable has
+          a specific data type that determines what kind of data can be stored
+          in it. Java also supports reference variables, which are variables
+          that refer to objects in memory.
+        </span>
+      </p>
+      <h2 className="text-2xl">Important things to know about variables</h2>
+      <ol className="inline-block font-thin text-left items-start justify-start py-1 list-decimal">
+        <li className="p-5">
+          Java has a wide range of built-in data types, including integers,
+          floating-point numbers, characters, and boolean values. It also allows
+          you to define custom data types using classes and interfaces.
+        </li>
+        <li className="p-5">
+          Variables in Java must be declared before they can be used, and you
+          can also initialize them at the same time you declare them. If a
+          variable is not initialized, it will contain a default value depending
+          on its data type.
+        </li>
+        <li className="p-5">
+          The scope of a variable in Java is determined by where it is declared
+          in the program. Variables declared inside a block of code are only
+          visible inside that block, while variables declared outside of any
+          block (class level variables) are visible to the entire class.
+        </li>
+        <li className="p-5">
+          Java allows you to declare variables as final using the final keyword.
+          Once a variable is declared as `final`, its value cannot be changed.
+        </li>
+        <li className="p-5">
+          Java allows you to declare class-level variables as `static` using the
+          static keyword. Static variables belong to the class rather than any
+          instance of the class, and they can be accessed using the class name.
+        </li>
+        <li className="p-5">
+          Java also allows you to declare constants using the `final` keyword. A
+          constant is a variable whose value cannot be changed after it is
+          initialized.
+        </li>
+        <li className="p-5">
+          Java allows you to convert a variable from one data type to another
+          using typecasting. Typecasting can be used to convert between built-in
+          data types, as well as to convert between custom data types.
+        </li>
+        <li className="p-5">
+          Java supports arrays, which are collections of variables of the same
+          data type. Arrays are declared using square brackets.
+        </li>
+        <li className="p-5">
+          In Java, reference variables are variables that refer to objects in
+          memory. Reference variables are declared using the class name, and
+          they can be used to access the properties and methods of the object
+          they refer to.
+        </li>
+        <li className="p-5">
+          To declare a variable in Java, you specify its type and name. You can
+          also initialize a variable at the same time you declare it, like this:
+        </li>
+
+        <div className="bg-gray-100 p-4 rounded-md my-7">
           <pre>
           <code className="text-sm font-mono">{codeSnippet}</code>
           </pre>

@@ -6,15 +6,16 @@ const codeSnippetTuple = `tup = (10, 20, 30, 'John')`;
 
 export const LevelTwoPython = () => {
   return (
-  <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
-  <iframe
-       width="420"
-       height="315"
-       src=""
-       className="p-5"
-       title="python-lists-dicts-tuples"
-     ></iframe>
-      <h1 className="text-4xl">Lists, Dictionaries, and Tuples</h1>
+    <div className="installation-info flex-1 flex flex-col items-start font-bold bg-slate-200 rounded-md p-10 mx-5 h-auto">
+      <div className="flex justify-center pb-10">
+        <iframe
+          width="420"
+          height="315"
+          src="https://www.youtube.com/embed/GX1uaYgmexg"
+          title="js-level1"
+        ></iframe>
+      </div>
+      <h1 className="text-4xl">What are variables?</h1>
       <p className="inline-block font-thin text-left items-start justify-start py-5">
       In Python, there are three built-in data structures that are used to
       store collections of data - lists, dictionaries, and tuples. These data
