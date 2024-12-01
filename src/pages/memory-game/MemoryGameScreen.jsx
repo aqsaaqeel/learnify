@@ -13,7 +13,7 @@ export const MemoryGameScreen = () => {
   const [cardItem, setCardItem] = useState([
     {
       id: 2,
-      name: "while loop",
+      name: "while loop", 
       img: "https://i.ibb.co/nQXj19q/2.png",
       state: "",
       Ques: "What keyword is used to exit a while loop in JavaScript?",
@@ -191,8 +191,10 @@ export const MemoryGameScreen = () => {
       };
     });
   };
+  // eslint-disable-next-line
   useEffect(() => {
     updateScore(currScore);
+    // eslint-disable-next-line
   }, [currScore]);
   return (
     <div className="flex h-screen">

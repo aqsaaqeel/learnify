@@ -1,4 +1,4 @@
-import { Sidebar, TicTacToe } from "../../component";
+import { TicTacToe } from "../../component";
 import { Square } from "./Square";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
@@ -9,9 +9,8 @@ import {
 } from "../../contents/tictactoe-questions/tittactoeQuestions";
 const defaultSquares = () => new Array(9).fill(null);
 
-
 export const TttGame = () => {
-  const {scores, setScores} = useScores();
+  const { scores, setScores } = useScores();
   const [showModal, setShowModal] = useState(false);
   const [squares, setSquares] = useState(defaultSquares());
   const [currScore, setCurrScore] = useState(0);
@@ -64,8 +63,6 @@ export const TttGame = () => {
       };
     });
   };
-  
-  
 
   useEffect(() => {
     updateScore(currScore);
@@ -81,13 +78,12 @@ export const TttGame = () => {
     const computerWon = linesThatAre("O", "O", "O").length > 0;
 
     if (playerWon) {
-      setCurrScore(currScore => currScore + 5);
+      setCurrScore((currScore) => currScore + 5);
       updateScore(currScore);
       setHasWon(true);
       console.log(scores);
       setWinner("Player");
       return;
-      
     }
 
     if (computerWon) {
@@ -113,6 +109,7 @@ export const TttGame = () => {
         putComputer(randomIndex);
       }, 2000);
     }
+    // eslint-disable-next-line
   }, [squares]);
 
   const handleSquareClick = (index) => {
@@ -170,15 +167,17 @@ export const TttGame = () => {
             )}
           </div>{" "}
           {hasWon && <h1 className="pb-5">{winner} won the game!</h1>}
-          {hasWon && <Link
-          className="inline-block px-7 py-3 mr-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-          data-mdb-ripple="true"
-          data-mdb-ripple-color="light"
-          to={`/progress/${language}/lvl2`}
-          role="button"
-        >
-          Proceed to next Level
-        </Link>}
+          {hasWon && (
+            <Link
+              className="inline-block px-7 py-3 mr-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+              data-mdb-ripple="true"
+              data-mdb-ripple-color="light"
+              to={`/progress/${language}/lvl2`}
+              role="button"
+            >
+              Proceed to next Level
+            </Link>
+          )}
         </div>
       </div>
     </div>

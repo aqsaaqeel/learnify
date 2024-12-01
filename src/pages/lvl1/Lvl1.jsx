@@ -1,5 +1,10 @@
 import { Link, useParams } from "react-router-dom";
-import { LevelOneJS, LevelOneJava, LevelOnePython, LevelOneC, LevelOneCpp, LevelOneR } from "../../contents/level1";
+import {
+  LevelOneJS,
+  LevelOneJava,
+  LevelOnePython,
+  LevelOneC,
+} from "../../contents/level1";
 export const Lvl1 = () => {
   let component;
   const { language } = useParams();
@@ -8,8 +13,7 @@ export const Lvl1 = () => {
     component = <LevelOneJS />;
   } else if (language === "python") {
     component = <LevelOnePython />;
-  } 
-  else if (language === "c") {
+  } else if (language === "c") {
     component = <LevelOneC />;
   } else if (language === "java") {
     component = <LevelOneJava />;

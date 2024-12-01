@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Sidebar } from "../../component";
+// import { Sidebar } from "../../component";
 
 const questions = [
   {

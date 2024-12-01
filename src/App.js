@@ -14,7 +14,6 @@ import {
   MemoryGameScreen,
   LightsOut,
   FillInBlanks,
-  Scoreboard,
 } from "./pages";
 import { Navbar } from "./component";
 

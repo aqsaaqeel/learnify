@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { Sidebar } from "../../component";
+// import { Sidebar } from "../../component";
 import { Board } from "./Board";
 export const LightsOut = () => {
   const {language} = useParams();
