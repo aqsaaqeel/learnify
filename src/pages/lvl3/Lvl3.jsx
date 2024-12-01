@@ -1,4 +1,3 @@
-import { Sidebar } from "../../component";
 import { Link, useParams } from "react-router-dom";
 import { LevelThreeC, LevelThreeJS, LevelThreeJava,  LevelThreePython, LevelThreeCpp} from "../../contents/level3";
 export const Lvl3 = () => {
@@ -18,9 +17,7 @@ export const Lvl3 = () => {
   }
   return (
     <div className="flex h-screen">
-      <div className="flex-none bg-gray-200 w-1/6">
-        <Sidebar />
-      </div>
+
       <div className="flex-1 flex flex-col gap-5 p-8">
         <div className="headings flex items-center justify-between">
           <div className="row-span-1 welcome-text text-3xl flex p-5 items-center">

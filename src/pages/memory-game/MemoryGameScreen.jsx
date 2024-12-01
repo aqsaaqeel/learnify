@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Sidebar, MemoryGame, WinningModal } from "../../component";
+import { MemoryGame, WinningModal } from "../../component";
 import { Card } from "./Card";
-import {Link, useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import "./lvl2.css";
 import { useScores } from "../../context/ScoreContext";
 export const MemoryGameScreen = () => {
@@ -196,9 +196,6 @@ export const MemoryGameScreen = () => {
   }, [currScore]);
   return (
     <div className="flex h-screen">
-      <div className="flex-none bg-gray-200 w-1/6">
-        <Sidebar />
-      </div>
       <div className="flex-1 flex flex-col gap-5 p-8">
         <div className="row-span-1 welcome-text text-3xl flex p-5 justify-center text-center items-center">
           Let's play

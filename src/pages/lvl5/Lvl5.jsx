@@ -1,4 +1,4 @@
-import { Sidebar } from "../../component";
+
 import { Link, useParams } from "react-router-dom";
 import { LevelFiveC, LevelFiveJS, LevelFiveJava,  LevelFivePython, LevelFiveCpp} from "../../contents/level5";
 export const Lvl5 = () => {
@@ -18,9 +18,7 @@ export const Lvl5 = () => {
   }
   return (
     <div className="flex h-screen">
-      <div className="flex-none bg-gray-200 w-1/6">
-        <Sidebar />
-      </div>
+
       <div className="flex-1 flex flex-col gap-5 p-8">
         <div className="headings flex items-center justify-between">
           <div className="row-span-1 welcome-text text-3xl flex p-5 items-center">
