@@ -26,7 +26,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
-        <Route exact path="/dashboard" element={<Dashboard /> } />
+        <Route path="/dashboard" element={<Dashboard /> } />
         <Route path="/progress/:language" element={<Progress />} />
         <Route path="/progress/:language/lvl1" element={<Lvl1 />} />
         <Route path="/progress/:language/lvl2" element={<Lvl2 />} />
