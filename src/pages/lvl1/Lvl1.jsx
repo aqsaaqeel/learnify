@@ -1,4 +1,3 @@
-import { Sidebar } from "../../component";
 import { Link, useParams } from "react-router-dom";
 import { LevelOneJS, LevelOneJava, LevelOnePython, LevelOneC, LevelOneCpp, LevelOneR } from "../../contents/level1";
 export const Lvl1 = () => {
@@ -9,21 +8,15 @@ export const Lvl1 = () => {
     component = <LevelOneJS />;
   } else if (language === "python") {
     component = <LevelOnePython />;
-  } else if (language === "cpp") {
-    component = <LevelOneCpp />;
-  } else if (language === "c") {
+  } 
+  else if (language === "c") {
     component = <LevelOneC />;
   } else if (language === "java") {
     component = <LevelOneJava />;
   }
-  else if (language === "r") {
-    component = <LevelOneR />;
-  }
+
   return (
     <div className="flex h-screen">
-      <div className="flex-none bg-gray-200 w-1/6">
-        <Sidebar />
-      </div>
       <div className="flex-1 flex flex-col gap-5 p-8">
         <div className="headings flex items-center justify-between">
           <div className="row-span-1 welcome-text text-3xl flex p-5 items-center">

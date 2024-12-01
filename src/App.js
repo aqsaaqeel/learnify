@@ -50,7 +50,7 @@ function App() {
           path="/progress/:language/lvl4/fillinblanks"
           element={<FillInBlanks />}
         />
-        <Route path="/scoreboard" element={<Scoreboard />} />
+        {/* <Route path="/scoreboard" element={<Scoreboard />} /> */}
       </Routes>
     </div>
   );

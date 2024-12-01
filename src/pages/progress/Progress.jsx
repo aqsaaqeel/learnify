@@ -1,5 +1,4 @@
 import { useParams, Link } from "react-router-dom";
-import { Sidebar } from "../../component";
 import { JsInst, PyInst, CppInst, JavaInst, CInst, RInst} from "../../contents";
 // import { Lvcpp1, Lvlpy1 } from "../../pages";
 export const Progress = () => {
@@ -29,9 +28,7 @@ export const Progress = () => {
   console.log("hi");
   return (
     <div className="flex h-screen">
-      <div className="flex-none bg-gray-200 w-1/6">
-        <Sidebar />
-      </div>
+
       <div className="flex-1 flex flex-col gap-5 p-8">
         <div className="row-span-1 welcome-text text-3xl flex p-5 justify-center text-center items-center">
           <span className="font-bold text-4xl p-2">

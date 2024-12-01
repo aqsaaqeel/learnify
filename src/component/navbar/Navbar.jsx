@@ -1,10 +1,10 @@
 import { useState } from "react";
 import React from "react";
-import { useAuth0 } from "@auth0/auth0-react";
-import { Link } from "react-router-dom";
+// import { useAuth0 } from "@auth0/auth0-react";
+// import { Link } from "react-router-dom";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const {loginWithRedirect} = useAuth0();
+  // const {loginWithRedirect} = useAuth0();
   return (
     <nav className="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
       <div className="px-6 w-full flex flex-wrap items-center justify-between">
@@ -43,7 +43,7 @@ export const Navbar = () => {
         </div>
         
         <div className="flex items-center lg:ml-auto">
-          <button
+          {/* <button
             type="button"
             className="inline-block px-6 py-2.5 mr-2 bg-transparent text-blue-600 
           font-medium text-xs leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 
@@ -59,9 +59,9 @@ export const Navbar = () => {
             }
           >
             Login
-          </button>
+          </button> */}
 
-          <Link to="/scoreboard"><button
+          {/* <Link to="/scoreboard"><button
             type="button"
             className="inline-block px-6 py-2.5 bg-blue-600 text-white 
           font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg
@@ -71,7 +71,7 @@ export const Navbar = () => {
             data-mdb-ripple-color="light"
           >
             ScoreBoard
-          </button></Link>
+          </button></Link> */}
         </div>
       </div>
     </nav>
