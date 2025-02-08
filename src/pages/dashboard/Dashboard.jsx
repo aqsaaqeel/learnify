@@ -8,6 +8,9 @@ export const Dashboard = () => {
         <div className="row-span-1 welcome-text text-3xl flex p-5 items-center">
           <span className="font-bold text-4xl p-1">Hi,</span> Kaushik!
         </div>
+        <div className="row-span-1 welcome-text text-3xl flex p-5 items-center">
+          <span className="font-bold text-4xl p-1">Thank you</span>
+        </div>
         <div className="row-span-9 subheading text-center flex flex-wrap gap-10 justify-center p-10">
         <Link to="/progress/javascript">
             <div>Javascript</div>
